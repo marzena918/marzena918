@@ -37,5 +37,11 @@ wszystkie = {"slaskie", "mazowieckie", "lubelskie", "podkarpackie", "malopolskie
              "pomorskie", "swietokrzyskie", "lodzkie", "podlaskie", "kujawsko-pomorskie", "dolnoslaskie", "lubuskie",
              "wielkopolskie"}
 
-result = {}
-
+result = set()
+dodane_stacje = []
+for i in all:
+    result.update(i[0])
+    dodane_stacje.append(i[1])
+    if result == wszystkie:
+        print(f"stacje pokrywajace caly kraj: {dodane_stacje}")
+        break
