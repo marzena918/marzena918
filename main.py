@@ -13,36 +13,23 @@ print(a2 &c2 & b2)
 print(b2.difference(a2 & c2))
 print(a2.union(b2, c2))
 print(a2.difference(b2.union(c2)))
-all = []
-rmf = {"slaskie","mazowieckie", "lubelskie","podkarpackie", "maloposlkie"}
-zet = {"slaskie", "lubelskie","podkarpackie", "maloposlkie","zachodnio pomorskie","podlaskie","swietokrzystkie"}
-eska = {"dolnoślaskie","mazowieckie", "lubelskie","podkarpackie", "maloposlkie", "opolskie", "pomorskie"}
-jedynka= {"slaskie","mazowieckie", "lubelskie","podkarpackie", "maloposlkie", "wielkopolskie", "opolskie","lubuskie", "wielkopolskie"}
-dwojka = {"slaskie","mazowieckie", "lodzkie","podkarpackie", "maloposlkie", "warminsko-mazurskie"}
-rock_radio = {"slaskie","mazowieckie", "lubelskie","podkarpackie", "maloposlkie","warminsko-mazurskie"}
-euro = {"slaskie","mazowieckie", "lubelskie","podkarpackie", "maloposlkie", "zachodnio pomorskie","lubuskie", "wielkopolskie"}
-slaskie_radio = {"slaskie","mazowieckie", "lubelskie","pomorskie", "maloposlkie"}
-radio_kids = {"slaskie","mazowieckie", "lubelskie","podkarpackie", "maloposlkie", "warminsko-mazurskie"}
-radio_polo = {"slaskie","mazowieckie", "pomorskie","podkarpackie", "maloposlkie", "lodzkie"}
 
-all.append(rmf)
-all.append(zet)
-all.append(eska)
-all.append(jedynka)
-all.append(dwojka)
-all.append(rock_radio)
-all.append(euro)
-all.append(slaskie_radio)
-all.append(radio_kids)
-all.append(radio_polo)
-wszystkie = {"slaskie","mazowieckie","lubelskie", "podkarpackie", "maloposlkie", "warminsko-mazurskie", "opolskie","zachodnio-pomorskie",
-             "pomorskie", "swietokrzystkie","lodzkie", "podlaskie", "kujawsko-pomorskie", "dolnoslaskie", "lubuskie", "wielkopolskie"}
+rmf = {"slaskie","mazowieckie", "lubelskie","podkarpackie", "malopolskie"}
+zet = {"slaskie", "lubelskie","podkarpackie", "malopolskie","zachodnio pomorskie","podlaskie","swietokrzyskie"}
+eska = {"dolnoślaskie","mazowieckie", "lubelskie","podkarpackie", "malopolskie", "opolskie", "pomorskie"}
+jedynka= {"slaskie","mazowieckie", "lubelskie","podkarpackie", "malopolskie", "wielkopolskie", "opolskie","lubuskie", "wielkopolskie"}
+dwojka = {"slaskie","mazowieckie", "lodzkie","podkarpackie", "malopolskie", "warminsko-mazurskie"}
+rock_radio = {"slaskie","mazowieckie", "lubelskie","podkarpackie", "malopolskie","warminsko-mazurskie"}
+euro = {"slaskie","mazowieckie", "lubelskie","podkarpackie", "malopolskie", "zachodnio pomorskie","lubuskie", "wielkopolskie"}
+slaskie_radio = {"slaskie","mazowieckie", "lubelskie","pomorskie", "malopolskie"}
+radio_kids = {"slaskie","mazowieckie", "lubelskie","podkarpackie", "malopolskie", "warminsko-mazurskie"}
+radio_polo = {"slaskie","mazowieckie", "pomorskie","podkarpackie", "malopolskie", "lodzkie"}
 
-liczba_wojewodztw_w_stacjach = {len(rmf), len(zet), len(eska), len(jedynka), len(dwojka), len(rock_radio), len(euro), len(slaskie_radio), len(radio_polo), len(radio_kids)}
-print(max(liczba_wojewodztw_w_stacjach))
+all = sorted([rmf, zet, eska, jedynka, dwojka, rock_radio, euro, slaskie_radio, radio_polo, radio_kids],
+             key=lambda x: len(x), reverse=True)
 
+wszystkie = {"slaskie","mazowieckie","lubelskie", "podkarpackie", "malopolskie", "warminsko-mazurskie", "opolskie","zachodnio-pomorskie",
+             "pomorskie", "swietokrzyskie","lodzkie", "podlaskie", "kujawsko-pomorskie", "dolnoslaskie", "lubuskie", "wielkopolskie"}
 
-
-for i in liczba_wojewodztw_w_stacjach:
-    liczba_wojewodztw_w_stacjach.pop(max(liczba_wojewodztw_w_stacjach))
+result = {}
 
