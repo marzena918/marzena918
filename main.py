@@ -38,6 +38,11 @@ all.append(radio_polo)
 wszystkie = {"slaskie","mazowieckie","lubelskie", "podkarpackie", "maloposlkie", "warminsko-mazurskie", "opolskie","zachodnio-pomorskie",
              "pomorskie", "swietokrzystkie","lodzkie", "podlaskie", "kujawsko-pomorskie", "dolnoslaskie", "lubuskie", "wielkopolskie"}
 
+liczba_wojewodztw_w_stacjach = {len(rmf), len(zet), len(eska), len(jedynka), len(dwojka), len(rock_radio), len(euro), len(slaskie_radio), len(radio_polo), len(radio_kids)}
+print(max(liczba_wojewodztw_w_stacjach))
 
-posortowane = sorted(all)
-print(posortowane)
+
+
+for i in liczba_wojewodztw_w_stacjach:
+    liczba_wojewodztw_w_stacjach.pop(max(liczba_wojewodztw_w_stacjach))
+
