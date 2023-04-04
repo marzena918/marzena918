@@ -40,6 +40,8 @@ wszystkie = {"slaskie", "mazowieckie", "lubelskie", "podkarpackie", "malopolskie
 result = set()
 dodane_stacje = []
 for i in all:
+    if i[0].issubset(result):
+        continue
     result.update(i[0])
     dodane_stacje.append(i[1])
     if result == wszystkie:
